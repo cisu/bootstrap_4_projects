@@ -20,7 +20,14 @@ body {
   width: 200px;
   height: 10px;
   margin: 0 auto;
-  background: blue !important;
+}
+
+.height-80 {
+  min-height: 80vh;
+}
+
+.about-picture {
+  background: url("../assets/images/laptop.jpg") center/cover no-repeat fixed;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -19,6 +19,18 @@ body {
   width: 200px;
   height: 10px;
   margin: 0 auto;
-  background: blue !important;
+  // background: blue !important;
 }
 
+.height-80 {
+  // height: 1000px;
+  min-height: 80vh;
+}
+
+.about-picture {
+  background: url('../assets/images/laptop.jpg') center/cover no-repeat fixed;
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+}
