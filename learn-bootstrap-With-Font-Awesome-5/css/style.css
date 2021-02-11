@@ -16,4 +16,11 @@ body {
   min-height: 100vh;
 }
 
+.title-underline {
+  width: 200px;
+  height: 10px;
+  margin: 0 auto;
+  background: blue !important;
+}
+
 /*# sourceMappingURL=style.css.map */
