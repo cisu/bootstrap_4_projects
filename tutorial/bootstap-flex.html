@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./bootstrap-4.6.0-dist/css/bootstrap.min.css"
+    />
+    <title>Bootstrap</title>
+    <style>
+      /* in order to work the align-item-something that container needs a height */
+      .col {
+        min-height: 50vh;
+      }
+
+      .row {
+        background: #f15025;
+        min-height: 50vh;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- d-flex -->
+
+    <!-- justify-content horizontal alignment -->
+
+    <!-- align-items vertical alignment -->
+
+    <!-- only the direct children  -->
+
+    <!-- .row by default is a Flex box container -->
+
+    <div class="container">
+      <div class="row">
+        <div
+          class="col bg-danger d-flex justify-content-between align-items-center"
+        >
+          <p class="bg-warning align-self-end">hello world</p>
+          <p class="bg-info">hello world</p>
+          <p class="bg-secondary align-self-start">hello world</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-9">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+            asperiores recusandae delectus fugit quas numquam tempore modi optio
+            aspernatur id?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
