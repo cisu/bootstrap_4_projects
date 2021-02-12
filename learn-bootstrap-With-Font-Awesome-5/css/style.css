@@ -1,9 +1,10 @@
 @font-face {
   font-family: "Roboto";
-  src: url("../assets/fonts/Roboto-Regular.ttf");
+  src: url("../assets/fonts/Roboto-Bold.ttf");
 }
 body {
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 .height {
@@ -22,6 +23,10 @@ body {
 
 .about-picture {
   background: url("../assets/images/laptop.jpg") center/cover no-repeat fixed;
+}
+
+#filler {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/projects-1.jpeg") center/cover no-repeat fixed;
 }
 
 /*# sourceMappingURL=style.css.map */
