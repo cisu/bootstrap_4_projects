@@ -25,7 +25,8 @@ body {
   background: url("../assets/images/laptop.jpg") center/cover no-repeat fixed;
 }
 
-#filler {
+#filler,
+#progress {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/projects-1.jpeg") center/cover no-repeat fixed;
 }
 
