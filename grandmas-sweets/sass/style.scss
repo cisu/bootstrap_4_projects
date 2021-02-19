@@ -17,17 +17,21 @@ body {
 // global styles
 a {
   color: $mainBlack;
-  text-decoration: none;
-  outline: none;
-  border: none;
+  text-decoration: none !important;
+  outline: none !important;
+  // border: none !important;
 
   &:hover,
   &:focus,
   &:active {
     color: $mainPink;
-    outline: none;
+    outline: none !important;
     box-shadow: none !important;
   }
+}
+
+*:focus {
+  box-shadow: none !important;
 }
 
 .form-control:focus {
@@ -189,14 +193,80 @@ a {
       url('../img/servicesBcg.jpeg') center/cover no-repeat fixed;
   }
 
-  
-  .service-title{
-    letter-spacing: .5rem;
+  .service-title {
+    letter-spacing: 0.5rem;
   }
 
-  .service-text{
-    word-spacing: .5rem;
+  .service-text {
+    word-spacing: 0.5rem;
   }
- 
 }
 // end of services
+
+// footer
+footer {
+  .footer-title {
+    background: $mainBlack;
+  }
+
+  .footer-content {
+    background: $mainGrey;
+  }
+
+  .footer-icon {
+    color: $mainWhite;
+    font-size: 1.5rem;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+      color: $mainPink;
+    }
+  }
+
+  .footer-icon__content {
+    color: $mainBlack;
+    &:hover {
+      color: $mainPink;
+    }
+  }
+}
+// end of footer
+
+// cart
+.cart {
+  position: absolute;
+  min-height: 10rem;
+  background: rgba(255,255,255, 0.7);
+  top: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  width: 0;
+  overflow: hidden;
+
+  
+
+  .cart-item{
+    transition: all 1s ease-in-out;
+  }
+
+  .cart-item-remove {
+    color: $mainPink;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+      color: $mainBlack;
+    }
+  }
+
+  .cart-item-price {
+    font-size: 0.8rem;
+  }
+}
+
+.show-cart{
+  width: 18rem;
+  padding: 2rem 1.5rem;
+  transform: rotate(-360deg);
+}
+// end of cart

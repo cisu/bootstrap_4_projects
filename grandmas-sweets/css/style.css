@@ -7,13 +7,16 @@ body {
 
 a {
   color: #000;
-  text-decoration: none;
-  outline: none;
-  border: none;
+  text-decoration: none !important;
+  outline: none !important;
 }
 a:hover, a:focus, a:active {
   color: #ef7998;
-  outline: none;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+*:focus {
   box-shadow: none !important;
 }
 
@@ -140,6 +143,58 @@ a:hover, a:focus, a:active {
 }
 #services .service-text {
   word-spacing: 0.5rem;
+}
+
+footer .footer-title {
+  background: #000;
+}
+footer .footer-content {
+  background: #eeeeee;
+}
+footer .footer-icon {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: all 0.4s ease-in-out;
+}
+footer .footer-icon:hover {
+  color: #ef7998;
+}
+footer .footer-icon__content {
+  color: #000;
+}
+footer .footer-icon__content:hover {
+  color: #ef7998;
+}
+
+.cart {
+  position: absolute;
+  min-height: 10rem;
+  background: rgba(255, 255, 255, 0.7);
+  top: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  width: 0;
+  overflow: hidden;
+}
+.cart .cart-item {
+  transition: all 1s ease-in-out;
+}
+.cart .cart-item-remove {
+  color: #ef7998;
+  transition: all 0.2s ease-in-out;
+}
+.cart .cart-item-remove:hover {
+  transform: scale(1.1);
+  color: #000;
+}
+.cart .cart-item-price {
+  font-size: 0.8rem;
+}
+
+.show-cart {
+  width: 18rem;
+  padding: 2rem 1.5rem;
+  transform: rotate(-360deg);
 }
 
 /*# sourceMappingURL=style.css.map */
