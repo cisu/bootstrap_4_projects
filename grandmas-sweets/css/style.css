@@ -8,9 +8,18 @@ body {
 a {
   color: #000;
   text-decoration: none;
+  outline: none;
+  border: none;
 }
 a:hover, a:focus, a:active {
   color: #ef7998;
+  outline: none;
+  box-shadow: none !important;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+  border-color: #ef7998 !important;
 }
 
 .btn-pink {
@@ -112,6 +121,14 @@ a:hover, a:focus, a:active {
 }
 #about .about-img__container:hover {
   box-shadow: none;
+}
+
+#store .store {
+  background: #eeeeee;
+}
+#store .search-box {
+  background: #ef7998;
+  color: #000;
 }
 
 /*# sourceMappingURL=style.css.map */

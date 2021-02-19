@@ -18,12 +18,21 @@ body {
 a {
   color: $mainBlack;
   text-decoration: none;
+  outline: none;
+  border: none;
 
   &:hover,
   &:focus,
   &:active {
     color: $mainPink;
+    outline: none;
+    box-shadow: none !important;
   }
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+  border-color: $mainPink !important;
 }
 
 .btn-pink {
@@ -46,6 +55,7 @@ a {
   }
 }
 
+// header
 #header {
   // nav links
   .navbar-toggler {
@@ -91,6 +101,9 @@ a {
   }
 }
 
+// end of header
+
+// banner
 .max-height {
   min-height: calc(100vh - 76px);
   background: linear-gradient($pinkTrans, $yellowTrans),
@@ -123,6 +136,9 @@ a {
   }
 }
 
+//  end of banner
+
+// about section
 #about {
   .about-img__container {
     position: relative;
@@ -149,3 +165,18 @@ a {
     }
   }
 }
+
+// end of about section
+
+// store section
+#store {
+  .store {
+    background: $mainGrey;
+  }
+
+  .search-box {
+    background: $mainPink;
+    color: $mainBlack;
+  }
+}
+// end of store section
