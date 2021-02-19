@@ -5,6 +5,32 @@ body {
   color: #000;
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover, a:focus, a:active {
+  color: #ef7998;
+}
+
+.btn-pink {
+  color: #ef7998 !important;
+  border-color: #ef7998 !important;
+}
+.btn-pink:hover {
+  color: #000 !important;
+  background: #ef7998 !important;
+}
+
+.btn-black {
+  color: #000 !important;
+  border-color: #000 !important;
+}
+.btn-black:hover {
+  color: #ef7998 !important;
+  background: #000 !important;
+}
+
 #header .navbar-toggler {
   outline: none !important;
 }
@@ -40,27 +66,52 @@ body {
   color: #fff;
 }
 
-#banner .max-height {
+.max-height {
   min-height: calc(100vh - 76px);
   background: linear-gradient(rgba(239, 121, 152, 0.5), rgba(249, 228, 148, 0.5)), url("../img/headerBcg.jpeg") center/cover no-repeat fixed;
   position: relative;
 }
-#banner .banner {
+
+.banner {
   color: #fff;
   margin-top: -4rem;
 }
-#banner .banner-title {
+.banner-title {
   color: #ef7998;
   font-size: 4rem;
 }
-#banner .banner-link {
+.banner-link {
   font-size: 1.5rem;
   color: #000;
   border: 0.2rem solid #000;
 }
-#banner .banner-link:hover {
+.banner-link:hover {
   background: #000;
   color: #ef7998;
+}
+
+#about .about-img__container {
+  position: relative;
+  box-shadow: -1.5rem -1.5rem 15px #eeeeee;
+  transition: all 0.5s linear;
+}
+#about .about-img__container::before {
+  content: "";
+  outline: 0.3rem solid #f9e494;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -1.5rem;
+  left: -1.5rem;
+  z-index: -1;
+  transition: all 0.5s linear;
+}
+#about .about-img__container:hover:before {
+  top: 0;
+  left: 0;
+}
+#about .about-img__container:hover {
+  box-shadow: none;
 }
 
 /*# sourceMappingURL=style.css.map */

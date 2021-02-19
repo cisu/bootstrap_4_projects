@@ -14,6 +14,38 @@ body {
   color: $mainBlack;
 }
 
+// global styles
+a {
+  color: $mainBlack;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $mainPink;
+  }
+}
+
+.btn-pink {
+  color: $mainPink !important;
+  border-color: $mainPink !important;
+
+  &:hover {
+    color: $mainBlack !important;
+    background: $mainPink !important;
+  }
+}
+
+.btn-black {
+  color: $mainBlack !important;
+  border-color: $mainBlack !important;
+
+  &:hover {
+    color: $mainPink !important;
+    background: $mainBlack !important;
+  }
+}
+
 #header {
   // nav links
   .navbar-toggler {
@@ -59,36 +91,61 @@ body {
   }
 }
 
-#banner {
-  .max-height {
-    min-height: calc(100vh - 76px);
-    background: linear-gradient($pinkTrans, $yellowTrans),
-      url('../img/headerBcg.jpeg') center/cover no-repeat fixed;
-    position: relative;
-    // background-position: center;
-    // background-size: cover;
-    // background-attachment: fixed;
-    // background-repeat: no-repeat;
+.max-height {
+  min-height: calc(100vh - 76px);
+  background: linear-gradient($pinkTrans, $yellowTrans),
+    url('../img/headerBcg.jpeg') center/cover no-repeat fixed;
+  position: relative;
+  // background-position: center;
+  // background-size: cover;
+  // background-attachment: fixed;
+  // background-repeat: no-repeat;
+}
+
+.banner {
+  color: $mainWhite;
+  margin-top: -4rem;
+
+  &-title {
+    color: $mainPink;
+    font-size: 4rem;
   }
 
-  .banner {
-    color: $mainWhite;
-    margin-top: -4rem;
+  &-link {
+    font-size: 1.5rem;
+    color: $mainBlack;
+    border: 0.2rem solid $mainBlack;
 
-    &-title {
+    &:hover {
+      background: $mainBlack;
       color: $mainPink;
-      font-size: 4rem;
     }
+  }
+}
 
-    &-link {
-      font-size: 1.5rem;
-      color: $mainBlack;
-      border: 0.2rem solid $mainBlack;
+#about {
+  .about-img__container {
+    position: relative;
+    box-shadow: -1.5rem -1.5rem 15px $mainGrey;
+    transition: all 0.5s linear;
 
-      &:hover {
-        background: $mainBlack;
-        color: $mainPink;
-      }
+    &::before {
+      content: '';
+      outline: 0.3rem solid $mainYellow;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: -1.5rem;
+      left: -1.5rem;
+      z-index: -1;
+      transition: all 0.5s linear;
+    }
+    &:hover:before {
+      top: 0;
+      left: 0;
+    }
+    &:hover {
+      box-shadow: none;
     }
   }
 }

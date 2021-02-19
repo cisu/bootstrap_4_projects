@@ -35,7 +35,7 @@
          -->
     <!--end of icons icons -->
 
-<!----------- header ----------->
+    <!----------- header ----------->
     <header id="header">
       <nav class="navbar navbar-expand-lg px-4">
         <!-- 
@@ -75,46 +75,77 @@
           </ul>
           <div class="nav-info-items d-none d-lg-flex">
             <!-- single info -->
-            <div class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+            <div
+              class="nav-info align-items-center d-flex justify-content-between mx-lg-5"
+            >
               <span class="info-icon mx-lg-3">
-                <i class="fas fa-phone"></i>
+                <a href="tel:+123456789">
+                  <i class="fas fa-phone"></i>
+                </a>
               </span>
               <p class="mb-0">+ 123 456 789</p>
             </div>
-              <!-- single info -->
-              <div id="cart-info" class="mav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
-                <span class="cart-info__icon mr-lg-3">
-                  <i class="fas fa-shopping-cart"></i>
-                </span>
-                  <p class="mb-0 text-capitalize">
-                    <span id="item-count">2</span>
-                    items - €
-                    <span class="item-total">
-                      10.49
-                    </span>
-                  </p>
-              </div>
+            <!-- single info -->
+            <div
+              id="cart-info"
+              class="mav-info align-items-center cart-info d-flex justify-content-between mx-lg-5"
+            >
+              <span class="cart-info__icon mr-lg-3">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+              <p class="mb-0 text-capitalize">
+                <span id="item-count">2</span>
+                items - €
+                <span class="item-total"> 10.49 </span>
+              </p>
+            </div>
           </div>
         </div>
       </nav>
     </header>
-<!----------- end of header ----------->
+    <!----------- end of header ----------->
 
-
-<!----------- banner ----------->
-<div class="container-fluid" id="banner">
-  <div class="row max-height justify-content-center align-items-center">
-    <div class="col-10 mx-auto banner text-center">
-      <h1 class="text-capitalize">
-        Welcome to
-        <strong class="banner-title">grandma's</strong>
-      </h1>
-      <a href="#store" class="btn banner-link text-uppercase my-2">explore</a>
+    <!----------- banner ----------->
+    <div class="container-fluid">
+      <div class="row max-height justify-content-center align-items-center">
+        <div class="col-10 mx-auto banner text-center">
+          <h1 class="text-capitalize">
+            Welcome to
+            <strong class="banner-title">grandma's</strong>
+          </h1>
+          <a href="#store" class="btn banner-link text-uppercase my-2"
+            >explore</a
+          >
+        </div>
+        <!-- store -->
+      </div>
     </div>
-    <!-- store -->
-  </div>
-</div>
-<!----------- end of banner ----------->
+    <!----------- end of banner ----------->
+
+    <!----------- about ----------->
+    <section class="about py-5" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-10 mx-auto col-md-6 my-5">
+            <h1 class="text-capitalize">
+              about
+              <strong class="banner-title">us</strong>
+            </h1>
+            <p class="my-4 text-muted w-75">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Voluptatibus veritatis explicabo quas itaque id tenetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, velit.
+            </p>
+            <a href="#" class="btn btn-black text-uppercase">explore</a>
+          </div>
+          <div class="col-10 mx-auto col-md-6 my-5 align-self-center">
+            <div class="about-img__container">
+              <img src="./img/sweets-1.jpeg" class="img-fluid" alt="sweets-1" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------- end of about ----------->
 
     <!-- jquery -->
     <script src="js/jquery-3.3.1.min.js"></script>
