@@ -12,3 +12,48 @@ body {
   background: $mainWhite;
   color: $mainBlack;
 }
+
+#header {
+  // nav links
+  .navbar-toggler {
+    outline: none !important;
+  }
+
+  .toggler-icon {
+    font-size: 2.5rem;
+    color: $mainPink;
+  }
+
+  .nav-link {
+    color: $mainPink;
+    transition: all 0.5s ease-out;
+    font-size: 1.5rem;
+
+    &:hover {
+      color: $mainBlack;
+    }
+  }
+
+  .cart-info {
+    border: 0.1rem solid $mainBlack;
+    color: $mainBlack;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+    &__icon {
+      color: $mainBlack;
+      cursor: pointer;
+    }
+
+    &:hover {
+      background: $mainPink;
+      border-color: $mainPink;
+      color: $mainWhite;
+
+      .fa-shopping-cart {
+        color: $mainWhite;
+      }
+    }
+  }
+}

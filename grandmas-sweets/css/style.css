@@ -5,4 +5,39 @@ body {
   color: #000;
 }
 
+#header .navbar-toggler {
+  outline: none !important;
+}
+#header .toggler-icon {
+  font-size: 2.5rem;
+  color: #ef7998;
+}
+#header .nav-link {
+  color: #ef7998;
+  transition: all 0.5s ease-out;
+  font-size: 1.5rem;
+}
+#header .nav-link:hover {
+  color: #000;
+}
+#header .cart-info {
+  border: 0.1rem solid #000;
+  color: #000;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+#header .cart-info__icon {
+  color: #000;
+  cursor: pointer;
+}
+#header .cart-info:hover {
+  background: #ef7998;
+  border-color: #ef7998;
+  color: #fff;
+}
+#header .cart-info:hover .fa-shopping-cart {
+  color: #fff;
+}
+
 /*# sourceMappingURL=style.css.map */
