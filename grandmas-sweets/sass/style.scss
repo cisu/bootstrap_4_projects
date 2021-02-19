@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
 
-$mainPink: #ef7998;
+$mainPink: rgb(239, 121, 152);
 $mainYellow: rgb(249, 228, 148);
 $mainWhite: #fff;
 $mainBlack: #000;
 $yellowTrans: rgba(249, 228, 148, 0.5);
+$pinkTrans: rgb(239, 121, 152, 0.5);
 $mainGrey: rgb(238, 238, 238);
 
 body {
@@ -53,6 +54,40 @@ body {
 
       .fa-shopping-cart {
         color: $mainWhite;
+      }
+    }
+  }
+}
+
+#banner {
+  .max-height {
+    min-height: calc(100vh - 76px);
+    background: linear-gradient($pinkTrans, $yellowTrans),
+      url('../img/headerBcg.jpeg') center/cover no-repeat fixed;
+    position: relative;
+    // background-position: center;
+    // background-size: cover;
+    // background-attachment: fixed;
+    // background-repeat: no-repeat;
+  }
+
+  .banner {
+    color: $mainWhite;
+    margin-top: -4rem;
+
+    &-title {
+      color: $mainPink;
+      font-size: 4rem;
+    }
+
+    &-link {
+      font-size: 1.5rem;
+      color: $mainBlack;
+      border: 0.2rem solid $mainBlack;
+
+      &:hover {
+        background: $mainBlack;
+        color: $mainPink;
       }
     }
   }

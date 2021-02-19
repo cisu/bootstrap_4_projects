@@ -40,4 +40,27 @@ body {
   color: #fff;
 }
 
+#banner .max-height {
+  min-height: calc(100vh - 76px);
+  background: linear-gradient(rgba(239, 121, 152, 0.5), rgba(249, 228, 148, 0.5)), url("../img/headerBcg.jpeg") center/cover no-repeat fixed;
+  position: relative;
+}
+#banner .banner {
+  color: #fff;
+  margin-top: -4rem;
+}
+#banner .banner-title {
+  color: #ef7998;
+  font-size: 4rem;
+}
+#banner .banner-link {
+  font-size: 1.5rem;
+  color: #000;
+  border: 0.2rem solid #000;
+}
+#banner .banner-link:hover {
+  background: #000;
+  color: #ef7998;
+}
+
 /*# sourceMappingURL=style.css.map */
