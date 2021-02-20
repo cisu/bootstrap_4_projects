@@ -1,8 +1,8 @@
-document.getElementById('cart-info').addEventListener('click', function () {
-  const cart = document.getElementById('cart');
-  cart.classList.toggle('show-cart');
-  console.log(cart);
-});
+// document.getElementById('cart-info').addEventListener('click', function () {
+//   const cart = document.getElementById('cart');
+//   cart.classList.toggle('show-cart');
+//   console.log(cart);
+// });
 
 // filter btns
 (function () {
@@ -121,16 +121,45 @@ document.getElementById('cart-info').addEventListener('click', function () {
       counter = imageList.length - 1;
     }
     item.style.backgroundImage = `url(${imageList[counter]})`;
-    console.log(counter);
+    // console.log(counter);
   });
 
-   // right button
-   btnRight.addEventListener('click', function () {
+  // right button
+  btnRight.addEventListener('click', function () {
     counter++;
     if (counter > imageList.length - 1) {
       counter = 0;
     }
     item.style.backgroundImage = `url(${imageList[counter]})`;
-    console.log(counter);
+    // console.log(counter);
+  });
+})();
+
+// show cart
+
+(function () {
+  const cartInfo = document.querySelector('#cart-info');
+  const cart = document.querySelector('#cart');
+
+  cartInfo.addEventListener('click', function () {
+    cart.classList.toggle('show-cart');
+  });
+})();
+
+// add items to the cart
+(function () {
+  const cartBtn = document.querySelectorAll('.store-item-icon');
+
+  cartBtn.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      // console.log(e.target);
+
+      if(e.target.parentElement.classList.contains('store-item-icon')){
+
+        console.log(e.target.parentElement)
+
+
+      }
+    });
   });
 })();
