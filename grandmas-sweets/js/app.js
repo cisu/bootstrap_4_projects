@@ -154,12 +154,96 @@
     btn.addEventListener('click', function (e) {
       // console.log(e.target);
 
-      if(e.target.parentElement.classList.contains('store-item-icon')){
+      if (e.target.parentElement.classList.contains('store-item-icon')) {
+        let fullPath = e.target.parentElement.previousElementSibling.src;
 
-        console.log(e.target.parentElement)
+        //  + 3 need cuz 'img' is 3 character
+        let position = fullPath.indexOf('img') + 3;
 
+        let partPath = fullPath.slice(position);
 
+        const item = {};
+        item.img = `img-cart${partPath}`;
+
+        let name =
+          e.target.parentElement.parentElement.nextElementSibling.children[0]
+            .children[0].textContent;
+        item.name = name;
+
+        // price
+        let price =
+          e.target.parentElement.parentElement.nextElementSibling.children[0]
+            .children[1].textContent;
+
+        // final price
+        let finalPrice = price.slice(1).trim();
+        item.price = finalPrice;
+        // console.log(finalPrice);
+
+        // console.log(name);
+
+        const cartItem = document.createElement('div');
+        cartItem.classList.add(
+          'cart-item',
+          'd-flex',
+          'justify-content-between',
+          'text-capitalize',
+          'py-3'
+        );
+
+        cartItem.innerHTML = `
+          <img
+            src="${item.img}"
+            id="item-img"
+            class="img-fluid rounded-circle"
+            alt="cake-1"
+          />
+          <div class="item-text">
+            <p id="cart-item-title" class="font-weight-bold mb-0">
+              ${item.name}
+            </p>
+            <span>€</span>
+            <span id="cart-item-price" class="cart-item-price mb-0"
+              >${item.price}</span
+            >
+          </div>
+          <a href="#" id="cart-item-remove" class="cart-item-remove">
+            <i class="fas fa-trash"></i>
+          </a>
+       `;
+
+        //  select cart
+        const cart = document.querySelector('#cart');
+        const total = document.querySelector('.cart-total-container');
+
+        cart.insertBefore(cartItem, total);
+
+        alert('item add to the cart');
+
+        showTotals();
       }
     });
   });
+  // show showTotals
+  function showTotals() {
+    const total = [];
+    const items = document.querySelectorAll('.cart-item-price');
+
+    items.forEach(function (item) {
+      total.push(parseFloat(item.textContent));
+    });
+    console.log(total);
+
+    const totalMoney = total.reduce(function (total, item) {
+      total += item;
+      return total;
+    }, 0);
+
+    const finalMoney = totalMoney.toFixed(2);
+
+    document.getElementById('cart-total').textContent = finalMoney;
+    document.querySelector('.item-total').textContent = finalMoney;
+    document.getElementById('item-count').textContent = total.length;
+
+  }
 })();
