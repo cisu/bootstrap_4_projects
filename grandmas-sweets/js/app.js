@@ -89,7 +89,48 @@ document.getElementById('cart-info').addEventListener('click', function () {
     imageList.push(img.src);
   });
 
-  console.log(imageList);
-  
+  // console.log(imageList);
 
+  // open modal
+  images.forEach(function (img) {
+    img.addEventListener('click', function (e) {
+      // show modal
+      container.classList.add('show');
+
+      // get source
+      let src = e.target.src;
+      // console.log(src);
+
+      counter = imageList.indexOf(src);
+      // console.log(counter)
+
+      // show modal with an images
+      item.style.backgroundImage = `url(${src})`;
+    });
+  });
+
+  // close modal
+  closeIcon.addEventListener('click', function () {
+    container.classList.remove('show');
+  });
+
+  // left button
+  btnLeft.addEventListener('click', function () {
+    counter--;
+    if (counter < 0) {
+      counter = imageList.length - 1;
+    }
+    item.style.backgroundImage = `url(${imageList[counter]})`;
+    console.log(counter);
+  });
+
+   // right button
+   btnRight.addEventListener('click', function () {
+    counter++;
+    if (counter > imageList.length - 1) {
+      counter = 0;
+    }
+    item.style.backgroundImage = `url(${imageList[counter]})`;
+    console.log(counter);
+  });
 })();

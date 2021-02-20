@@ -257,26 +257,26 @@ footer .footer-icon__content:hover {
 }
 
 .lightbox-close {
-  color: var(--mainPink);
+  color: #ef7998;
   font-size: 3rem;
   transition: all 1s ease-in-out;
   cursor: pointer;
 }
 
 .lightbox-close:hover {
-  color: var(--mainYellow);
+  color: #f9e494;
 }
 
 .lightbox-control {
   position: absolute;
   font-size: 4rem;
-  color: var(--mainPink);
+  color: #ef7998;
   transition: all 1s linear;
   cursor: pointer;
 }
 
 .lightbox-control:hover {
-  color: var(--mainYellow);
+  color: #f9e494;
 }
 
 .btnLeft {

@@ -335,24 +335,24 @@ footer {
   border-radius: 0.3rem;
 }
 .lightbox-close {
-  color: var(--mainPink);
+  color: $mainPink;
   font-size: 3rem;
   transition: all 1s ease-in-out;
   cursor: pointer;
 }
 .lightbox-close:hover {
-  color: var(--mainYellow);
+  color: $mainYellow;
 }
 
 .lightbox-control {
   position: absolute;
   font-size: 4rem;
-  color: var(--mainPink);
+  color: $mainPink;
   transition: all 1s linear;
   cursor: pointer;
 }
 .lightbox-control:hover {
-  color: var(--mainYellow);
+  color: $mainYellow;
 }
 .btnLeft {
   top: 50%;
