@@ -70,3 +70,26 @@ document.getElementById('cart-info').addEventListener('click', function () {
     });
   });
 })();
+
+// lightbox
+(function () {
+  // all images
+  let imageList = [];
+  let counter = 0;
+
+  const images = document.querySelectorAll('.store-img');
+  const container = document.querySelector('.lightbox-container');
+  const item = document.querySelector('.lightbox-item');
+  const closeIcon = document.querySelector('.lightbox-close');
+  const btnLeft = document.querySelector('.btnLeft');
+  const btnRight = document.querySelector('.btnRight');
+
+  // add all images to the array
+  images.forEach(function (img) {
+    imageList.push(img.src);
+  });
+
+  console.log(imageList);
+  
+
+})();
