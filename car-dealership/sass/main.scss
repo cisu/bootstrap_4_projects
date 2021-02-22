@@ -12,3 +12,39 @@ body {
   color: $mainBlack;
   background: $mainWhite;
 }
+
+.navbar {
+  background: $mainWhite;
+
+  &-icon {
+    font-size: 2rem;
+    color: $mainBlue;
+  }
+
+  &-toggler {
+    outline-color: $mainBlue !important;
+  }
+
+  .nav-link {
+    color: $mainBlack;
+    text-transform: capitalize;
+
+    &:hover {
+      color: $mainBlue;
+    }
+  }
+
+  .nav-icon {
+    font-size: 2rem;
+    color: $mainBlue;
+    text-decoration: none;
+    transition: all 0.5s linear;
+    // transition-property: color;
+    // transition-duration: 0.5s;
+    // transition-timing-function: linear;
+
+    &:hover {
+      color: $mainBlack;
+    }
+  }
+}

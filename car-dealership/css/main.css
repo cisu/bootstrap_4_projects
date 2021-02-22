@@ -5,4 +5,31 @@ body {
   background: #ffffff;
 }
 
+.navbar {
+  background: #ffffff;
+}
+.navbar-icon {
+  font-size: 2rem;
+  color: #40acf1;
+}
+.navbar-toggler {
+  outline-color: #40acf1 !important;
+}
+.navbar .nav-link {
+  color: #292f36;
+  text-transform: capitalize;
+}
+.navbar .nav-link:hover {
+  color: #40acf1;
+}
+.navbar .nav-icon {
+  font-size: 2rem;
+  color: #40acf1;
+  text-decoration: none;
+  transition: all 0.5s linear;
+}
+.navbar .nav-icon:hover {
+  color: #292f36;
+}
+
 /*# sourceMappingURL=main.css.map */
