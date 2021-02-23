@@ -106,4 +106,23 @@ body {
   }
 }
 
+.skills {
+  &-icon {
+    font-size: 3rem;
+    color: $mainYellow;
+    background: $mainGrey;
+
+    &:hover {
+      color: $mainYellow;
+    }
+  }
+
+  &-underline {
+    width: 4rem;
+    height: 0.3rem;
+    background: $mainBlue;
+    margin: 1rem auto;
+  }
+}
+
 @import 'media-min768';
