@@ -267,7 +267,7 @@ body {
       opacity: 0.5;
     }
 
-    &:hover::after{
+    &:hover::after {
       transform: scale(1);
     }
 
@@ -287,6 +287,40 @@ body {
 
   &-img {
     transition: all 0.5s ease-in-out;
+  }
+}
+
+// contact
+.contact {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../img/headerBcg.jpeg') center/cover no-repeat fixed;
+
+  &-input {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    background: transparent;
+    border-color: $mainYellow;
+    color: $mainYellow !important;
+
+    &::placeholder {
+      color: $mainYellow;
+    }
+
+    &::focus {
+      background: transparent;
+      border-color: $mainYellow;
+    }
+  }
+
+  &-btn {
+    text-transform: uppercase;
+    color: $mainYellow;
+    border-color: $mainYellow;
+
+    &:hover {
+      background: $mainYellow;
+      color: $mainBlack;
+    }
   }
 }
 

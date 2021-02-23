@@ -229,6 +229,33 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
+.contact {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/headerBcg.jpeg") center/cover no-repeat fixed;
+}
+.contact-input {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  background: transparent;
+  border-color: #e3b505;
+  color: #e3b505 !important;
+}
+.contact-input::placeholder {
+  color: #e3b505;
+}
+.contact-input::focus {
+  background: transparent;
+  border-color: #e3b505;
+}
+.contact-btn {
+  text-transform: uppercase;
+  color: #e3b505;
+  border-color: #e3b505;
+}
+.contact-btn:hover {
+  background: #e3b505;
+  color: #292f36;
+}
+
 @media (min-width: 768px) {
   .header .title {
     font-size: 3rem;
