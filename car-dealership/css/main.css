@@ -3,6 +3,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: #292f36;
   background: #ffffff;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -30,6 +31,50 @@ body {
 }
 .navbar .nav-icon:hover {
   color: #292f36;
+}
+
+.header {
+  color: #ffffff;
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+  overflow: hidden;
+}
+.header .height-max {
+  background: url("../img/headerBcg.jpeg") center/cover no-repeat fixed;
+  min-height: calc(100vh - 76px);
+  animation: zoom 20s 5s infinite;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.header .title-heading {
+  background: rgba(0, 0, 0, 0.4);
+  border-left: 0.3rem solid #40acf1;
+}
+.header .title {
+  font-weight: 700;
+  font-size: 1.9rem;
+}
+.header .title-icon {
+  color: #40acf1;
+  text-decoration: none !important;
+}
+.header .title-icon:hover {
+  color: #40acf1;
+  opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  .header .title {
+    font-size: 3rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

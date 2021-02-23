@@ -11,6 +11,7 @@ body {
   font-family: 'Roboto', sans-serif;
   color: $mainBlack;
   background: $mainWhite;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -48,3 +49,53 @@ body {
     }
   }
 }
+
+.header {
+  color: $mainWhite;
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+  overflow: hidden;
+
+  .height-max {
+    background: url('../img/headerBcg.jpeg') center/cover no-repeat fixed;
+    min-height: calc(100vh - 76px);
+    animation: zoom 20s 5s infinite;
+    // animation-name: zoom;
+    // animation-duration: 20s;
+    // animation-delay: 5s;
+    // animation-iteration-count: infinite;
+  }
+
+  @keyframes zoom {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .title-heading {
+    background: rgba(0, 0, 0, 0.4);
+    border-left: 0.3rem solid $mainBlue;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 1.9rem;
+  }
+
+  .title-icon {
+    color: $mainBlue;
+    text-decoration: none !important;
+
+    &:hover {
+      color: $mainBlue;
+      opacity: 0.8;
+    }
+  }
+}
+
+@import 'media-min768';
