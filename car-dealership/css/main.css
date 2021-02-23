@@ -128,6 +128,28 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
+.question {
+  background: url("../img/questionBcg.jpeg") center/cover no-repeat fixed;
+}
+.question-grey {
+  background: rgba(79, 109, 122, 0.75);
+}
+.question-yellow {
+  background: rgba(255, 181, 5, 0.75);
+}
+.question-icon {
+  font-size: 4rem;
+  color: #40acf1;
+  transition: all 0.5s ease-in-out;
+}
+.question-icon:hover {
+  transform: translateY(-10%);
+  color: #40acf1;
+}
+.question-info {
+  color: #ffffff;
+}
+
 @media (min-width: 768px) {
   .header .title {
     font-size: 3rem;
