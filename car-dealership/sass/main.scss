@@ -140,4 +140,29 @@ body {
   }
 }
 
+// inventory
+.inventory {
+  background: $mainGrey;
+  .car-card {
+    border-radius: 0 !important;
+  }
+
+  .car-img {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+
+  .car-value {
+    background: $mainBlue;
+    color: $mainWhite;
+    clip-path: polygon(15% 0, 85% 0, 100% 100%, 0 100%);
+    transition: all 0.5s linear;
+    cursor: pointer;
+
+    &:hover {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+}
+
 @import 'media-min768';

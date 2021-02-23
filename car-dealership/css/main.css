@@ -107,6 +107,27 @@ body {
   margin: 1rem auto;
 }
 
+.inventory {
+  background: #d8d6d6;
+}
+.inventory .car-card {
+  border-radius: 0 !important;
+}
+.inventory .car-img {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+.inventory .car-value {
+  background: #40acf1;
+  color: #ffffff;
+  clip-path: polygon(15% 0, 85% 0, 100% 100%, 0 100%);
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+.inventory .car-value:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
 @media (min-width: 768px) {
   .header .title {
     font-size: 3rem;
