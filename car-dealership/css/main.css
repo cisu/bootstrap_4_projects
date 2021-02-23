@@ -256,6 +256,36 @@ body {
   color: #292f36;
 }
 
+.services {
+  position: relative;
+  min-height: 85vh;
+  max-width: 95vw;
+  margin: 0 auto;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+}
+.services .video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.services .video-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.services .video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(64, 172, 241, 0.7);
+  z-index: 1;
+}
+
 @media (min-width: 768px) {
   .header .title {
     font-size: 3rem;
