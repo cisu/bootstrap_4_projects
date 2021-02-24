@@ -78,7 +78,7 @@ const CreateCars = (() => {
 
 const DisplaySpecialCars = ((CreateCars) => {
   const specialCars = CreateCars.specialCars;
-  console.log(specialCars);
+  // console.log(specialCars);
 
   const info = document.querySelector('.featured-info');
 
@@ -110,5 +110,56 @@ const DisplaySpecialCars = ((CreateCars) => {
       const img = e.target.parentElement.dataset.img;
       document.querySelector('.featured-photo').src = img;
     }
+  });
+})(CreateCars);
+
+const DisplayCars = ((CreateCars) => {
+  // all cars
+  const cars = CreateCars.cars;
+  
+  // car container
+  const inventory = document.querySelector('.inventory-container');
+
+  // content loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    inventory.innerHTML = '';
+
+    let output = '';
+
+    cars.forEach((car) => {
+      output += `
+      <!-- single car -->
+      <div class="col-10 mx-auto my-3 col-md-6 col-lg-4 single-car ${car.country}">
+        <div class="card car-card">
+          <img src="${car.img}" class='card-img-top car-img' alt="german-1">
+          <!-- card body -->
+          <div class="card-body">
+            <div class="card-info d-flex justify-content-between">
+              <!-- first flex child -->
+              <div class="car-text text-uppercase">
+                <h6 class="font-weight-bold">
+                  ${car.make}
+                </h6>
+                <h6>${car.model}</h6>
+              </div>
+               <!-- second flex child -->
+              <h5 class="car-value align-self-center py-2 px-3">
+                <span class="car-price">${car.price}</span> €
+              </h5>   
+            </div>
+          </div>
+          <!-- end of card -->
+          <div class="card-footer text-capitalize d-flex justify-content-between">
+            <p><span><i class="fas fa-car"></i></span> ${car.type}</p>
+            <p><span><i class="fas fa-cogs"></i></span> ${car.trans}</p>
+            <p><span><i class="fas fa-gas-pump"></i></span> ${car.gas}</p>
+          </div>
+        </div>
+      </div>
+      <!-- end of single car -->
+      `;
+    });
+
+    inventory.innerHTML = output;
   });
 })(CreateCars);
