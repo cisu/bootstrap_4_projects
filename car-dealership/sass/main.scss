@@ -324,6 +324,7 @@ body {
   }
 }
 
+// services
 .services {
   position: relative;
   min-height: 85vh;
@@ -371,6 +372,32 @@ body {
       font-size: 4rem;
       color: $mainYellow;
     }
+  }
+}
+
+// quotes
+.quotes {
+  .customer-card-body {
+    margin-top: -4rem !important;
+    color: $mainGrey;
+  }
+
+  .customer-img {
+    border: 0.4rem solid $mainWhite;
+  }
+
+  .customer-name {
+    color: $mainBlue;
+    margin: 0.5rem;
+  }
+
+  .customer-icon {
+    font-size: 2rem;
+    color: $mainGrey;
+  }
+
+  .customer-quote{
+    max-width: 90%;
   }
 }
 
