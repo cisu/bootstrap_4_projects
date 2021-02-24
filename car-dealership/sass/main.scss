@@ -396,8 +396,24 @@ body {
     color: $mainGrey;
   }
 
-  .customer-quote{
+  .customer-quote {
     max-width: 90%;
+  }
+}
+
+// footer
+.footer {
+  background: $mainBlack;
+
+  &-icon {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: $mainYellow;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      color: $mainBlue;
+    }
   }
 }
 
