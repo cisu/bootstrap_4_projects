@@ -29,6 +29,9 @@ body {
 
 .navbar {
   background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 .navbar-icon {
   font-size: 2rem;
@@ -52,6 +55,17 @@ body {
 }
 .navbar .nav-icon:hover {
   color: #292f36;
+}
+.navbar.navbar-active {
+  background: #e3b505;
+  color: #ffffff;
+  padding: 0rem 2rem;
+}
+.navbar.navbar-active .navbar-icon {
+  color: #292f36;
+}
+.navbar.navbar-active .navbar-toggler {
+  outline-color: #e3b505 !important;
 }
 
 .header {

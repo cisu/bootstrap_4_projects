@@ -116,7 +116,7 @@ const DisplaySpecialCars = ((CreateCars) => {
 const DisplayCars = ((CreateCars) => {
   // all cars
   const cars = CreateCars.cars;
-  
+
   // car container
   const inventory = document.querySelector('.inventory-container');
 
@@ -163,3 +163,41 @@ const DisplayCars = ((CreateCars) => {
     inventory.innerHTML = output;
   });
 })(CreateCars);
+
+// filter cars
+const filterCars = (() => {
+  const filter = document.querySelectorAll('.filter-btn');
+
+  filter.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      const value = e.target.dataset.filter;
+      const singleCar = document.querySelectorAll('.single-car');
+      console.log(singleCar);
+
+      singleCar.forEach((car) => {
+        if (value === 'all') {
+          car.style.display = 'block';
+        } else {
+          !car.classList.contains(value)
+            ? (car.style.display = 'none')
+            : (car.style.display = 'block');
+        }
+      });
+    });
+  });
+})();
+// show modal
+
+// sticky navbar
+const navbar = (() => {
+  const nav = document.querySelector('.navbar');
+  window.addEventListener('scroll', fixNav);
+
+  function fixNav() {
+    if (window.scrollY > nav.offsetHeight + 400) {
+      nav.classList.add('navbar-active');
+    } else {
+      nav.classList.remove('navbar-active');
+    }
+  }
+})();

@@ -39,6 +39,9 @@ body {
 
 .navbar {
   background: $mainWhite;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
   &-icon {
     font-size: 2rem;
@@ -69,6 +72,20 @@ body {
 
     &:hover {
       color: $mainBlack;
+    }
+  }
+
+  &.navbar-active {
+    background: $mainYellow;
+    color: $mainWhite;
+    padding: 0rem 2rem;
+
+    .navbar-icon {
+      color: $mainBlack;
+    }
+
+    .navbar-toggler {
+      outline-color: $mainYellow !important;
     }
   }
 }
