@@ -337,7 +337,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: -1;
   }
 
   .video-item {
@@ -353,7 +353,24 @@ body {
     width: 100%;
     height: 100%;
     background: $transparentBlue;
-    z-index: 1;
+    z-index: 0;
+  }
+
+  .service {
+    background: $mainBlack;
+    color: $mainWhite;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      background: $mainWhite;
+      color: $mainBlack;
+      padding-left: 2.2rem !important;
+    }
+
+    &-icon {
+      font-size: 4rem;
+      color: $mainYellow;
+    }
   }
 }
 
